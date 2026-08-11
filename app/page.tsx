@@ -55,7 +55,16 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <ImagePlaceholder label="Students on a UK campus" style={{ width: "100%", height: 480 }} />
+        <div
+          style={{
+            width: "100%",
+            height: 480,
+            backgroundImage: 'url("/images/image 1.webp")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
       </div>
 
       {/* STATS */}
@@ -95,7 +104,16 @@ export default function HomePage() {
       {/* UK SPOTLIGHT */}
       <div style={{ background: colors.cream }}>
         <div className="spotlight-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "100px 32px", display: "grid", gridTemplateColumns: "0.9fr 1.1fr", gap: 64, alignItems: "center" }}>
-          <ImagePlaceholder label="A UK landmark or campus photo" style={{ width: "100%", height: 420 }} />
+          <div
+            style={{
+              width: "100%",
+              height: 420,
+              backgroundImage: 'url("/images/image 2.webp")',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          />
           <div>
             <Eyebrow>Destination Spotlight</Eyebrow>
             <h2 style={{ fontSize: 32, fontWeight: 800, margin: "0 0 20px" }}>Your Gateway to the United Kingdom</h2>

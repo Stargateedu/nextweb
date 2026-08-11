@@ -25,10 +25,6 @@ export default function Nav() {
       >
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, color: colors.ink }}>
           <Logo />
-          <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-            <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: 1.5 }}>STARGATE</span>
-            <span style={{ fontSize: 8, fontWeight: 600, letterSpacing: 2, color: colors.silver }}>EDUCATION GROUP</span>
-          </div>
         </Link>
 
         <nav className="nav-links" style={{ display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap" }}>

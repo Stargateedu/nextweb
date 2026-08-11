@@ -16,24 +16,28 @@ const stories = [
     quote: "Stargate turned an overwhelming process into a clear path — I never felt alone in it.",
     name: "Amara O.",
     program: "MSc Data Science, Manchester",
+    image: "/images/story-tomasz.webp",
   },
   {
     id: "story-2",
     quote: "My visa was approved without a single issue. The mock interview made all the difference.",
     name: "Rohan K.",
     program: "BSc Economics, LSE",
+    image: "/images/story-tomasz.webp",
   },
   {
     id: "story-3",
     quote: "They found me a scholarship I didn't even know I qualified for.",
     name: "Chidi E.",
     program: "MEng, Imperial College London",
+    image: "/images/story-tomasz.webp",
   },
   {
     id: "story-4",
     quote: "From our first call, I knew exactly what to do next. That clarity was everything.",
     name: "Sofia M.",
     program: "LLB Law, University of Bristol",
+    image: "/images/story-tomasz.webp",
   },
   {
     id: "story-5",
@@ -47,6 +51,7 @@ const stories = [
     quote: "I applied to five universities and got into four, thanks to their shortlist strategy.",
     name: "Yuki T.",
     program: "BA Architecture, University of Bath",
+    image: "/images/story-tomasz.webp",
   },
 ];
 

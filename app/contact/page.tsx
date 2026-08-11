@@ -29,13 +29,13 @@ export default function ContactPage() {
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, color: colors.muted, marginBottom: 4 }}>
                 EMAIL
               </div>
-              <div style={{ fontSize: 15, fontWeight: 600 }}>info@stargategroup.com</div>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>info@stargateeducationgroup.com</div>
             </div>
             <div style={{ marginBottom: 18 }}>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, color: colors.muted, marginBottom: 4 }}>
                 PHONE
               </div>
-              <div style={{ fontSize: 15, fontWeight: 600 }}>+00 1234 567 800</div>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>+44 7404766169</div>
             </div>
             <div>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, color: colors.muted, marginBottom: 4 }}>

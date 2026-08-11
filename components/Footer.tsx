@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import FooterLogo from "./FooterLogo";
 import { colors } from "@/lib/theme";
 
 export default function Footer() {
@@ -18,8 +19,7 @@ export default function Footer() {
       >
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, color: colors.bg, marginBottom: 16 }}>
-            <Logo size={30} />
-            <span style={{ fontSize: 15, fontWeight: 800, letterSpacing: 1.5 }}>STARGATE</span>
+            <FooterLogo  />
           </div>
           <p style={{ fontSize: 13, lineHeight: 1.7, color: colors.silver, maxWidth: 280, margin: 0 }}>
             A student recruitment agency committed to opening doors to global education — beyond education, beyond
@@ -63,8 +63,8 @@ export default function Footer() {
             CONTACT
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13, color: colors.bg }}>
-            <span>info@stargategroup.com</span>
-            <span>+00 1234 567 800</span>
+            <span>info@stargateeducationgroup.com</span>
+            <span>+44 7404766169</span>
           </div>
         </div>
       </div>
