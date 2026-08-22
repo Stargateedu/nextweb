@@ -5,7 +5,7 @@ import CtaBand from "@/components/CtaBand";
 import { colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
-  title: "How It Works | Stargate Education Group",
+  title: "How It Works | Stargate Education Consultants",
   description: "Five clear stages, from your first conversation with us to your first day on a UK campus.",
 };
 

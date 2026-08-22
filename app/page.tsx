@@ -43,7 +43,7 @@ export default function HomePage() {
             Beyond Boundaries.
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.7, color: colors.muted, maxWidth: 480, margin: "0 0 36px" }}>
-            Stargate Education Group guides ambitious students from application to arrival, opening doors to
+            Stargate Education Consultants guides ambitious students from application to arrival, opening doors to
             Britain&rsquo;s most prestigious universities.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>

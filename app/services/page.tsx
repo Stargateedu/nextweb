@@ -5,7 +5,7 @@ import { CapIcon, ShieldIcon, TrendIcon, GlobeIcon, ScholarshipIcon } from "@/co
 import { colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
-  title: "Services | Stargate Education Group",
+  title: "Services | Stargate Education Consultants",
   description: "Services built around your application — from first shortlist to landing on campus.",
 };
 

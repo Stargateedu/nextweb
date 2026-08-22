@@ -7,8 +7,8 @@ import { TrendIcon } from "@/components/icons";
 import { colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
-  title: "About | Stargate Education Group",
-  description: "Stargate Education Group is a student recruitment agency committed to opening doors to global education.",
+  title: "About | Stargate Education Consultants",
+  description: "Stargate Education Consultants is a student recruitment agency committed to opening doors to global education.",
 };
 
 const values = [
@@ -35,7 +35,7 @@ export default function AboutPage() {
           Opening Doors to Global Education
         </h1>
         <p style={{ fontSize: 17, lineHeight: 1.8, color: colors.muted, maxWidth: 720, margin: 0 }}>
-          Stargate Education Group is a student recruitment agency committed to opening doors to global education.
+          Stargate Education Consultants is a student recruitment agency committed to opening doors to global education.
           Our brand represents progress, trust, and the pursuit of a future beyond boundaries.
         </p>
       </div>

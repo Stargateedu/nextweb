@@ -3,9 +3,10 @@ import Eyebrow from "@/components/Eyebrow";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import ContactForm from "@/components/ContactForm";
 import { colors } from "@/lib/theme";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact | Stargate Education Group",
+  title: "Contact | Stargate Education Consultants",
   description: "Start your application — a Stargate advisor will reach out within one business day.",
 };
 
@@ -29,7 +30,11 @@ export default function ContactPage() {
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, color: colors.muted, marginBottom: 4 }}>
                 EMAIL
               </div>
-              <div style={{ fontSize: 15, fontWeight: 600 }}>info@stargateeducationgroup.com</div>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>
+                <Link href="mailto:info@stargateeducationconsultants.com" rel="noopener noreferrer">
+                  info@stargateeducationconsultants.com
+                </Link>
+              </div>
             </div>
             <div style={{ marginBottom: 18 }}>
               <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 0.5, color: colors.muted, marginBottom: 4 }}>

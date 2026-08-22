@@ -4,7 +4,7 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
-  title: "Insights | Stargate Education Group",
+  title: "Insights | Stargate Education Consultants",
   description: "Guidance for every stage of your application.",
 };
 

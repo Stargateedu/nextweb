@@ -12,9 +12,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Stargate Education Group | Beyond Education. Beyond Boundaries.",
+  title: "Stargate Education Consultants | Beyond Education. Beyond Boundaries.",
   description:
-    "Stargate Education Group guides ambitious students from application to arrival, opening doors to Britain's most prestigious universities.",
+    "Stargate Education Consultants guides ambitious students from application to arrival, opening doors to Britain's most prestigious universities.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

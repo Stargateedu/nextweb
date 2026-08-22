@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import FooterLogo from "./FooterLogo";
+// import FooterLogo from "./FooterLogo";
 import { colors } from "@/lib/theme";
 
 export default function Footer() {
@@ -19,7 +19,11 @@ export default function Footer() {
       >
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, color: colors.bg, marginBottom: 16 }}>
-            <FooterLogo  />
+            <img
+              src="images/footerlogo.png"
+              alt="Stargate Education Consultants"
+              style={{ display: "block", height: 42, width: "auto" }}
+            />
           </div>
           <p style={{ fontSize: 13, lineHeight: 1.7, color: colors.silver, maxWidth: 280, margin: 0 }}>
             A student recruitment agency committed to opening doors to global education — beyond education, beyond
@@ -63,14 +67,16 @@ export default function Footer() {
             CONTACT
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 13, color: colors.bg }}>
-            <span>info@stargateeducationgroup.com</span>
+            <Link href="mailto:info@stargateeducationconsultants.com" rel="noopener noreferrer" style={{ color: colors.bg }}>
+              info@stargateeducationconsultants.com
+            </Link>
             <span>+44 7404766169</span>
           </div>
         </div>
       </div>
       <div style={{ borderTop: "1px solid #2a2a2c" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "20px 32px", fontSize: 12, color: colors.silver }}>
-          &copy; 2026 Stargate Education Group. All rights reserved.
+          &copy; 2026 Stargate Education Consultants. All rights reserved.
         </div>
       </div>
 

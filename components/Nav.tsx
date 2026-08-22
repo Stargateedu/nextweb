@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
+// import FooterLogo from "./FooterLogo";
 import { colors, NAV_LINKS, CTA_LABEL } from "@/lib/theme";
 
 export default function Nav() {
@@ -24,7 +25,7 @@ export default function Nav() {
         }}
       >
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, color: colors.ink }}>
-          <Logo />
+          <Logo className="NavLogo"/>
         </Link>
 
         <nav className="nav-links" style={{ display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap" }}>
@@ -34,6 +35,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
+                className={`nav-link ${active ? "active" : ""}`}
                 style={{
                   fontSize: 13,
                   fontWeight: 600,
@@ -99,6 +101,7 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
+                className={`nav-link ${active ? "active" : ""}`}
                 style={{
                   fontSize: 14,
                   fontWeight: 600,
@@ -131,6 +134,10 @@ export default function Nav() {
       )}
 
       <style>{`
+        .nav-link{transition: color .18s ease, transform .18s ease, box-shadow .18s ease; text-decoration: none; box-shadow: none;}
+        .nav-link:hover, .nav-link:focus{color: ${colors.gold}; transform: scale(1.02); text-decoration: none;}
+        .nav-link.active{color: ${colors.gold};}
+
         @media (max-width: 860px) {
           .nav-links,
           .nav-cta {

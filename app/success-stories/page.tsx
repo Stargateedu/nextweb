@@ -6,7 +6,7 @@ import { QuoteIcon } from "@/components/icons";
 import { colors } from "@/lib/theme";
 
 export const metadata: Metadata = {
-  title: "Success Stories | Stargate Education Group",
+  title: "Success Stories | Stargate Education Consultants",
   description: "Real students, real placements, real outcomes across the UK's leading universities.",
 };
 
