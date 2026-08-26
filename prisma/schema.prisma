@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  STUDENT
+  AGENT
+  ADMIN
+}
+
+enum PostStatus {
+  PUBLISHED
+  DRAFT
+}
+
+enum AgentStatus {
+  APPROVED
+  PENDING
+  REJECTED
+}
+
+enum AgentTier {
+  OG
+  GOLD
+  SILVER
+  BRONZE
+}
+
+enum SubmissionType {
+  CONTACT
+  STUDENT_APPLICATION
+  AGENT_ENQUIRY
+  JOB_APPLICATION
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(STUDENT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  posts     Post[]
+
+  @@map("users")
+}
+
+model Post {
+  id        String     @id @default(cuid())
+  title     String
+  slug      String     @unique
+  category  String
+  status    PostStatus @default(DRAFT)
+  excerpt   String
+  content   String?    @db.Text
+  imageUrl  String?
+  likes     Int        @default(0)
+  dislikes  Int        @default(0)
+  author    User       @relation(fields: [authorId], references: [id])
+  authorId  String
+  comments  Comment[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@map("posts")
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  name      String
+  content   String   @db.Text
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId    String
+  createdAt DateTime @default(now())
+
+  @@map("comments")
+}
+
+model Agent {
+  id        String      @id @default(cuid())
+  agentCode String      @unique
+  name      String
+  email     String      @unique
+  phone     String
+  country   String
+  tier      AgentTier   @default(BRONZE)
+  status    AgentStatus @default(PENDING)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@map("agents")
+}
+
+model Course {
+  id         String   @id @default(cuid())
+  title      String
+  university String
+  level      String
+  fee        String
+  intake     String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("courses")
+}
+
+model Submission {
+  id        String         @id @default(cuid())
+  type      SubmissionType
+  name      String
+  details   String         @db.Text
+  read      Boolean        @default(false)
+  createdAt DateTime       @default(now())
+
+  @@map("submissions")
+}

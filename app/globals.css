@@ -1,3 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #121214;
+  --color-gold: #D4AF37;
+  --color-muted: #5a5a5c;
+  --color-silver: #B8B8B8;
+  --color-cream: #F5F1EB;
+  --color-border: #EDEAE3;
+  --color-admin-bg: #F8F7F4;
+  --color-danger: #AA3333;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,12 +31,8 @@ body {
 }
 
 a {
-  color: #121214;
+  color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  color: #d4af37;
 }
 
 input,
@@ -36,4 +45,20 @@ button {
 ::selection {
   background: #d4af37;
   color: #121214;
+}
+
+@media (scripting: none) {
+  [data-reveal] {
+    visibility: visible !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    visibility: visible !important;
+  }
+}
+
+.split-line {
+  overflow: hidden;
 }

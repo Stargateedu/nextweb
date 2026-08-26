@@ -6,13 +6,14 @@ export const colors = {
   silver: "#B8B8B8",
   cream: "#F5F1EB",
   border: "#EDEAE3",
+  danger: "#AA3333",
 } as const;
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/success-stories", label: "Success Stories" },
+  { href: "/courses", label: "Courses" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/insights", label: "Insights" },
 ] as const;

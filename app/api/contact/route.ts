@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -21,13 +22,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
   }
 
-  console.log("New Stargate inquiry:", {
-    name,
-    email,
-    phone: body.phone,
-    program: body.program,
-    message,
-    receivedAt: new Date().toISOString(),
+  const phone = typeof body.phone === "string" ? body.phone.trim() : "";
+  const program = typeof body.program === "string" ? body.program.trim() : "";
+
+  const detailParts = [`email: ${email}`];
+  if (phone) detailParts.push(`phone: ${phone}`);
+  if (program) detailParts.push(`program: ${program}`);
+  detailParts.push(`message: ${message}`);
+
+  await prisma.submission.create({
+    data: {
+      name,
+      type: "CONTACT",
+      details: detailParts.join(" | "),
+    },
   });
 
   return NextResponse.json({ ok: true });
