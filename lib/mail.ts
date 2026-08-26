@@ -11,7 +11,6 @@ const transporter = nodemailer.createTransport({
 });
 
 const FROM = `"Stargate Education Consultants" <${process.env.SMTP_USER}>`;
-const ADMIN = process.env.ADMIN_EMAIL!;
 const LOGO = "https://stargateeducationconsultants.com/images/footerlogo.png";
 
 function logoHeader(): string {
@@ -264,11 +263,11 @@ export async function sendSubmissionEmails(
     );
   }
 
-  if (ADMIN) {
+  if (process.env.SMTP_USER) {
     promises.push(
       transporter.sendMail({
         from: FROM,
-        to: ADMIN,
+        to: process.env.SMTP_USER!,
         subject: `[Stargate] ${ADMIN_SUBJECT[type] || "New Submission"} — ${name}`,
         html: adminNotification(type, name, pairs),
       })
