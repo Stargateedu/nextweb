@@ -75,7 +75,7 @@ export default function DashboardPage() {
               >
                 <div>
                   <div className="text-[13px] font-bold">{row.name}</div>
-                  <div className="text-xs text-muted mt-0.5">{row.agency}</div>
+                  <div className="text-xs text-muted mt-0.5">{row.country}</div>
                 </div>
                 <span
                   className="text-[10px] font-extrabold tracking-[0.8px] px-2 py-1"
